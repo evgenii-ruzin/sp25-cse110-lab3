@@ -8,53 +8,46 @@ h2 {
     font-size: 300%;
 }
 
-h1,h2 {
-    text-align: center;
-}
-
 h3 {
     font-size: 200%;
-    text-align: center;
 }
 
 h1, h2, h3 {
+    text-align: center;
     margin: 5px auto 5px auto;
-    background-color: lightgray;
+    background-color: #ebf2f2;
     border-style: hidden;
     border-radius: 10px;
     padding: 10px;
-    width: 30%;
+    width: 90%;
 
 }
 
 .section {
-    position: static;
+    position: auto;
     text-align: center;
 }
 
-.title, .navigation, section, footer {
+section {
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
+    font-size: 125%;
+    width: 50%;
 }
 
 .navigation {
     display: block;
     text-align: center;
-    position: sticky;
+    width: 100%;
 }
 
-fieldset {
-    width: 50%;
-    margin: auto;
-}
-
-.contents {
+fieldset, .contents {
     width: 50%;
     margin: auto;
 }
@@ -65,4 +58,15 @@ textarea {
 
 body {
     display: grid;
+}
+
+header, footer, main {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+header section:first-of-type,
+main section:first-of-type,
+footer section:first-of-type {
+    margin-top: 0px;
 }
