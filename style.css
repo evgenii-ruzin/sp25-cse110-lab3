@@ -1,0 +1,68 @@
+/* start of my css file */
+
+h1 {
+    font-size: 400%;
+}
+
+h2 {
+    font-size: 300%;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 200%;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 5px auto 5px auto;
+    background-color: lightgray;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+
+}
+
+.section {
+    position: static;
+    text-align: center;
+}
+
+.title, .navigation, section, footer {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.navigation {
+    display: block;
+    text-align: center;
+    position: sticky;
+}
+
+fieldset {
+    width: 50%;
+    margin: auto;
+}
+
+.contents {
+    width: 50%;
+    margin: auto;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+body {
+    display: grid;
+}
