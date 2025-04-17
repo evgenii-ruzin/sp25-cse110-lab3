@@ -13,26 +13,30 @@
 
     <body>
         <header>
-            <div class="title">
-                <h1><span style="color: blue;">MDR</span> Meeting</h1>
-                <h2>Checking-in with Mr. Milchick</h2>
-                <h3>Date: <input type="date"></h3>
-            </div>
-
-            <div class="navigation">
-                <h3>Navigation:</h3>
-                <div class="contents">
-                    <nav>
-                        <a href="#1">Agenda</a> |
-                        <a href="#2">Closing last meeting</a> |
-                        <a href="#3">Progress</a> |
-                        <a href="#4">Hallways concerns</a> |
-                        <a href="#5">MDE</a> |
-                        <a href="#6">Attendance</a> |
-                        <a href="#7">Form</a>   
-                    </nav>
-                </div>        
-            </div>
+            <section>
+                <div class="title">
+                    <h1><span style="color: blue;">MDR</span> Meeting</h1>
+                    <h2>Checking-in with Mr. Milchick</h2>
+                    <h3>Date: <input type="date"></h3>
+                </div>
+            </section>
+            
+            <section>
+                <div class="navigation">
+                    <h3>Navigation:</h3>
+                    <div class="contents">
+                        <nav>
+                            <a href="#1">Agenda</a> |
+                            <a href="#2">Closing last meeting</a> |
+                            <a href="#3">Progress</a> <br>
+                            <a href="#4">Hallways concerns</a> |
+                            <a href="#5">MDE</a> |
+                            <a href="#6">Attendance</a> |
+                            <a href="#7">Form</a>   
+                        </nav>
+                    </div>        
+                </div>
+            </section>
         </header>
 
         <main>
@@ -98,49 +102,51 @@
                     </div>
                 </div>
             </section>
+
+            <section id="7">
+                <h3 class="section">Please, fill in this form</h3>
+                <form>
+                    <fieldset>
+                        <legend>Work Experience</legend>
+                        <label for="experience">How would you rate your overall experience in MDR?</label>
+                        <select name="experience" id="experience">
+                            <option value="Excellent">Excellent</option>
+                            <option value="Outstanding">Outstanding</option>
+                            <option value="Great">Great</option>
+                            <option value="Best">The best in my life</option>
+                        </select>
+                        <br><br>
+                        <label for="work">What do you think about the work that you do at MDR?</label>
+                        <input list="qualities" name="work" id="work">
+                        <datalist id="qualities">
+                            <option value="It's mysterious">
+                            <option value="It's important">
+                            <option value="It's mysterious and important">
+                        </datalist>
+                        <br><br>
+                        <label for="question">If you find Mark S. suspicious, please tell us everything he's up to:</label>
+                        <textarea id="question" name="question" rows="2" cols="50">Mark S. ...</textarea>
+                        <br><br>
+                        <button type="button">Submit the form</button>
+                    </fieldset>
+                </form>
+            </section>
         </main>
 
         <footer id="6">
-            <h3 class="section">Attendance:</h3>
-            <div class="contents">
-                <ul>
-                    <li><input type="radio"> Mark S.</li>
-                    <li><input type="checkbox"> Helly R.</li>
-                    <li><input type="radio"> Irving B.</li>
-                    <li><input type="checkbox"> Dylan G.</li>
-                    <li>If someone else attended the meeting, put their name here: <input type="text"></li>
-                </ul>
-            </div>
+            <section>
+                <h3 class="section">Attendance:</h3>
+                <div class="contents">
+                    <ul>
+                        <li><input type="radio"> Mark S.</li>
+                        <li><input type="checkbox"> Helly R.</li>
+                        <li><input type="radio"> Irving B.</li>
+                        <li><input type="checkbox"> Dylan G.</li>
+                        <li>If someone else attended the meeting, put their name here: <input type="text"></li>
+                    </ul>
+                </div>
+            </section>
         </footer>
-
-        <section id="7">
-            <h3 class="section">Please, fill in this form</h3>
-            <form>
-                <fieldset>
-                    <legend>Work Experience</legend>
-                    <label for="experience">How would you rate your overall experience in MDR?</label>
-                    <select name="experience" id="experience">
-                        <option value="Excellent">Excellent</option>
-                        <option value="Outstanding">Outstanding</option>
-                        <option value="Great">Great</option>
-                        <option value="Best">The best in my life</option>
-                    </select>
-                    <br><br>
-                    <label for="work">What do you think about the work that you do at MDR?</label>
-                    <input list="qualities" name="work" id="work">
-                    <datalist id="qualities">
-                        <option value="It's mysterious">
-                        <option value="It's important">
-                        <option value="It's mysterious and important">
-                    </datalist>
-                    <br><br>
-                    <label for="question">If you find Mark S. suspicious, please tell us everything he's up to:</label>
-                    <textarea id="question" name="question" rows="2" cols="50">Mark S. ...</textarea>
-                    <br><br>
-                    <button type="button">Submit the form</button>
-                </fieldset>
-            </form>
-        </section>
     </body>
 
 </html>
