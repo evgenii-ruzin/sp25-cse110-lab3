@@ -57,7 +57,7 @@ h3.section, h3:has(+ div) {
 }
 
 .section {
-    position: auto;
+    position: relative;
     text-align: center;
 }
 
@@ -76,7 +76,7 @@ section {
 }
 
 .navigation {
-    position: relative;
+    position: sticky;
     display: block;
     text-align: center;
     width: 100%;
@@ -140,22 +140,22 @@ nav a {
 #secondPlace {
     text-align: center;
     width: 50%;
-    background-color: color(display-p3 0.75 0.75 0.75);
+    background-color: silver;
 }
 
 #thirdPlace {
     text-align: center;
     width: 50%;
-    background-color: color-mix(in srgb, sienna 60%, goldenrod 40%);
+    background-color: #CD7F32;
 }
 
 button:hover {
     background-color: green;
-    color: white;
+    color: color(display-p3 1 1 1);;
 }
 
 #badAnswer:hover {
-    background-color: red;
+    background-color: color-mix(in srgb, red 90%, white 10%);
     color: white;
     margin-left: 200px;
 }
@@ -165,7 +165,6 @@ button:hover {
 }
 
 .correct:active {
-    size: 100%;
     text-align: center;
     background-color: green;
     color: white;
@@ -176,7 +175,6 @@ button:hover {
 }
 
 .wrong:active {
-    size: 100%;
     text-align: center;
     background-color: red;
     color: black;
@@ -184,15 +182,4 @@ button:hover {
 
 div[type="secret"] {
     display: none;
-}
-
-header, footer, main {
-    margin-top: 10px;
-    overflow: hidden;
-}
-
-header section:first-of-type,
-main section:first-of-type,
-footer section:first-of-type {
-    margin-top: 0px;
 }
