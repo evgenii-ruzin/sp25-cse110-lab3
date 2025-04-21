@@ -9,13 +9,14 @@
         <meta name="author" content="Me">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="watch.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
             <section>
                 <div class="title">
-                    <h1><span style="color: blue;">MDR</span> Meeting</h1>
+                    <h1><span>MDR</span> Meeting</h1>
                     <h2>Checking-in with Mr. Milchick</h2>
                     <h3>Date: <input type="date"></h3>
                 </div>
@@ -24,11 +25,11 @@
             <section>
                 <div class="navigation">
                     <h3>Navigation:</h3>
-                    <div class="contents">
+                    <div class="navConts">
                         <nav>
                             <a href="#1">Agenda</a> |
                             <a href="#2">Closing last meeting</a> |
-                            <a href="#3">Progress</a> <br>
+                            <a href="#3">Progress</a> |
                             <a href="#4">Hallways concerns</a> |
                             <a href="#5">MDE</a> |
                             <a href="#6">Attendance</a> |
@@ -38,6 +39,8 @@
                 </div>
             </section>
         </header>
+
+        <div type="secret">How did you find it?</div>
 
         <main>
             <section id="1">
@@ -65,9 +68,9 @@
                 <div class="contents">
                     Currently, the progress is as follows:
                     <ol>
-                        <li>Helly R. - 75%</li>
-                        <li>Dylan G. - 61%</li>
-                        <li>Irving B. - 46%</li>
+                        <li id="firstPlace">Helly R. - 75%</li>
+                        <li id="secondPlace">Dylan G. - 61%</li>
+                        <li id="thirdPlace">Irving B. - 46%</li>
                         <li>Mark S. - -21% (how he even managed to get negative progress bruh)</li>
                     </ol>
                 </div>
@@ -92,7 +95,7 @@
                     <p>Music Dance Experience was held for Helly R.</p>
                     <p>Below you can find both video and audio recording of MDE (please, enjoy each recording equally)</p>
                     <div class="vid-aud">
-                        <video width="auto" height="auto" controls>
+                        <video width="640" height="268" controls>
                             <source src="media/video.mp4" type="video/mp4">
                         </video>
                         <br><br>
@@ -127,7 +130,8 @@
                         <label for="question">If you find Mark S. suspicious, please tell us everything he's up to:</label>
                         <textarea id="question" name="question" rows="2" cols="50">Mark S. ...</textarea>
                         <br><br>
-                        <button type="button">Submit the form</button>
+                        <button type="button" id="goodAnswer">Submit the form<div class="correct">CORRECT!</div></button>
+                        <button type="button" id="badAnswer">I won't rat on my bro!<div class="wrong">WRONG!</div></button>
                     </fieldset>
                 </form>
             </section>

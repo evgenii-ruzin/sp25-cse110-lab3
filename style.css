@@ -1,18 +1,14 @@
 /* start of my css file */
 
+@media (max-width: 768px) {
+    html {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
 h1 {
-    font-size: 400%;
-}
-
-h2 {
-    font-size: 300%;
-}
-
-h3 {
-    font-size: 200%;
-}
-
-h1, h2, h3 {
+    font-size: 7ch; /*first relative unit*/
     text-align: center;
     margin: 5px auto 5px auto;
     background-color: #ebf2f2;
@@ -20,31 +16,78 @@ h1, h2, h3 {
     border-radius: 10px;
     padding: 10px;
     width: 90%;
+}
 
+h2 {
+    font-size: 3em; /*second relative unit*/
+}
+
+h3 {
+    font-size: 200%; /*third relative unit*/
+}
+
+h1 + h2 {
+    text-align: center;
+    margin: 5px auto 5px auto;
+    background-color: #ebf2f2;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+h1 ~ h2 ~ h3 {
+    text-align: center;
+    margin: 5px auto 5px auto;
+    background-color: #ebf2f2;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+h3.section, h3:has(+ div) {
+    text-align: center;
+    margin: 5px auto 5px auto;
+    background-color: #ebf2f2;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
 }
 
 .section {
-    position: auto;
+    position: static;
     text-align: center;
 }
 
 section {
     border-style: solid;
-    border-radius: 10px;
+    border-radius: 10px; /*first absolute unit*/
     border-width: 1px;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-top: 0.15625in; /*second absolute unit*/
+    margin-bottom: 0.3125pc; /*third absolute unit*/
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     font-size: 125%;
-    width: 50%;
+    max-width: 50%;
+    min-width: 30%;
 }
 
 .navigation {
+    position: relative;
     display: block;
     text-align: center;
     width: 100%;
+}
+
+/*grid example*/
+section > nav {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
 }
 
 fieldset, .contents {
@@ -56,17 +99,89 @@ textarea {
     vertical-align: top;
 }
 
+/*flexbox example*/
 body {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    
 }
 
 header, footer, main {
     margin-top: 10px;
-    overflow: hidden;
 }
 
 header section:first-of-type,
 main section:first-of-type,
 footer section:first-of-type {
     margin-top: 0px;
+}
+
+span {
+    color: rgb(61, 192, 252);
+    font-family: 'Playwrite RO';
+}
+
+nav a {
+    color: hsl(294, 82%, 56%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#firstPlace {
+    text-align: center;
+    width: 50%;
+    background-color: lab(86.93% -1.92 87.14);
+    background-color: gold; /*fallback of background-color propety*/
+}
+
+#secondPlace {
+    text-align: center;
+    width: 50%;
+    background-color: color(display-p3 0.75 0.75 0.75);
+}
+
+#thirdPlace {
+    text-align: center;
+    width: 50%;
+    background-color: color-mix(in srgb, sienna 60%, goldenrod 40%);
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+}
+
+#badAnswer:hover {
+    background-color: red;
+    color: white;
+    margin-left: 200px;
+}
+
+.correct {
+    color: transparent;
+}
+
+.correct:active {
+    size: 100%;
+    text-align: center;
+    background-color: green;
+    color: white;
+}
+
+.wrong {
+    color: transparent;
+}
+
+.wrong:active {
+    size: 100%;
+    text-align: center;
+    background-color: red;
+    color: black;
+}
+
+div[type="secret"] {
+    display: none;
 }
