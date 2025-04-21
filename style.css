@@ -57,7 +57,7 @@ h3.section, h3:has(+ div) {
 }
 
 .section {
-    position: static;
+    position: auto;
     text-align: center;
 }
 
@@ -184,4 +184,15 @@ button:hover {
 
 div[type="secret"] {
     display: none;
+}
+
+header, footer, main {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+header section:first-of-type,
+main section:first-of-type,
+footer section:first-of-type {
+    margin-top: 0px;
 }
